@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+
+import { HttpClient, HttpHeaders, HttpClientModule } from '@angular/common/http';
 import { Router } from '@angular/router';
 
 @Injectable()
