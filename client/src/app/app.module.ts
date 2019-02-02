@@ -1,7 +1,16 @@
+const routes = [
+  { path: 'login', component: LoginComponent },
+  { path: 'members', component: MembersComponent },
+  { path: '', component: HomeComponent },
+  { path: '**', redirectTo: '' }
+];
+
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
@@ -16,8 +25,11 @@ import { MembersComponent } from './members/members.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule.forRoot(routes)
   ],
+
   providers: [],
   bootstrap: [AppComponent]
 })
